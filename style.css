@@ -1,0 +1,139 @@
+body {
+    background-color: #2C3131 ;
+    padding : 10px ;
+    font-family: 'Roboto', sans-serif;
+}
+.text-container {
+    display: flex ;
+    justify-content: space-around ;
+    height : calc(100vh - 20px) ;
+    width : calc(100vw - 20px) ;
+}
+#undo-redo {
+    width : 20% ;
+    margin-top : 50px ;
+    display: flex ;
+    flex-flow: column ;
+    align-items: center ;
+}
+#white-area {
+    background-color: white ;
+    width : 60% ;
+    left: 20% ;
+    margin : 0px 30px ;
+}
+.draggable {
+    position: absolute;
+    cursor: move;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+}
+#text-editing {
+    width : 20% ;
+    margin-top : 50px ;
+    display: flex ;
+    flex-flow: column ;
+    margin-top : 50px ;
+    align-items: center ;
+}
+#text-editing label {
+    color : white ;
+}
+.action-btn{
+    background-color: #94E6FC ;
+    height : 56px ;
+    width : 240px ;
+    border-radius: 10px ;
+    border : none ;
+    margin : 2em ;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    padding : 16px ;
+    transition:  0.3s ;
+    cursor: pointer;
+}
+.action-btn:hover {
+    background-color: #59ceef ;
+}
+#size[type=number]::-webkit-inner-spin-button, 
+#size[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance : button ;
+    margin: 0;
+    background-color: #94E6FC ;
+    color : black ;
+}
+.title {
+    color : white ;
+    padding : 2px ;
+}
+
+.dropdown {
+    min-width: 15em ;
+    position: relative ;
+    margin: 2em ;
+}
+.dropdown * {
+    box-sizing: border-box ;
+}
+.select {
+    background-color: #94E6FC ;
+    color : black ;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    border-radius: 10px ;
+    padding : 16px ;
+    cursor: pointer;
+    transition:  0.3s ;
+    width: 100% ;
+}
+.select:hover {
+    background-color: #59ceef ;
+}
+.caret {
+    width : 0 ;
+    height : 0 ;
+    border-left : 5px solid transparent ;
+    border-right: 5px solid transparent ;
+    border-top: 6px solid black ;
+    transition: 0.3s ;
+}
+.caret-rotate {
+    transform: rotate(180deg) ;
+}
+.menu {
+    list-style: none ;
+    padding : 0.2em 0.5em ;
+    background-color: #94E6FC ;
+    border: 2px solid #2C3131 ;
+    box-shadow : 0 0.5em 1em rgba(0,0,0, 0.2) ;
+    border-radius: 10px ;
+    color : rgb(61, 61, 61) ;
+    position: absolute ;
+    top : 5.5em ;
+    left : 50% ;
+    width : 100% ;
+    transform: translate(-50%) ;
+    opacity: 0 ;
+    display: none ;
+    transition: 0.2s ;
+    z-index: 1 ;
+}
+.menu li {
+    padding : 0.7em 0.5em ;
+    margin : 0.3em 0 ;
+    border-radius: 0.5em ;
+}
+.menu li:hover {
+    background-color :#4ebcdb;
+}
+.active {
+    background-color: #4ebcdb;
+}
+.menu-open {
+    display: block ;
+    opacity: 1 ;
+}
