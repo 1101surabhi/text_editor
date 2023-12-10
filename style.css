@@ -89,6 +89,7 @@ body {
     cursor: pointer;
     transition:  0.3s ;
     width: 100% ;
+    border : none ;
 }
 .select:hover {
     background-color: #59ceef ;
